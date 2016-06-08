@@ -65,7 +65,7 @@
                         <a class="page-scroll" href="#Interest">INTERESTS</a>
                     </li>
                     <li>
-                        <a href="files/cv.pdf">RESUME</a>
+                        <a href="https://www.visualcv.com/raghvendra-tolia">RESUME</a>
                     </li>
                     <li>
                       <a href="https://www.github.com/rstolia123">GITHUB</a>
@@ -116,8 +116,7 @@
        </div>
     </header>
 
-    <!--Research Section-->    
-    <!-- Portfolio Grid Section -->
+    <!--Research Section / Portfolio Grid Section  -->    
     <section id="portfolio">
         <div class="container">
             <div class="row">
@@ -126,6 +125,29 @@
                     <hr class="star-primary">
                 </div>
             </div>
+
+<p><table align="center">
+   <col width="370">
+   <col width="370">
+   <col width="370">
+
+    <tr>
+    <th><iframe width="370" height="240" src="files/app.mp4" frameborder="0" allowfullscreen> </iframe></th>
+    <th> <img src= "img/portfolio/iot.png" style="width:370px;height:235px;"</th>
+    <th><img src= "img/portfolio/android.jpg" style="width:370px;height:235px;"></th>
+    </tr>
+
+    <tr>
+        <td align="justify" style="font-size:105%"><b>As an application developer at <a href="http://www.mojonetworks.com/">Mojo Networks</a> developed <b>Wi-Fi Analyzer</b> application  for Wifi Channel planning , implementation and optimization. Dynamically analyzes Wi-Fi environment. Includes features like Wifi Scanner(SSID ,BSSID), Channel Interference Analyzer, Wi-Fi Channel Graph (number of users present in a particular channel according to their  RSSI dBm strength ) and recommendation view (2.4GHz and 5 GHz .</td>
+
+        <td align="justify" style="font-size:105%"> <b>Nothing here</b></td> 
+
+        <td align="justify" style="font-size:105%"> <b>Nothing here</b></td>
+    </tr>
+
+</table></p>
+
+
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#MIT_MediaLab" class="portfolio-link" data-toggle="modal">
@@ -470,7 +492,6 @@
         </div>
     </div>
 
-
     <div class="portfolio-modal modal fade" id="VR" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -541,7 +562,7 @@
                             <img src="img/portfolio/hackinout.jpg" class="img-responsive img-centered" alt="">
                             <img src="img/portfolio/hackinout2.jpg" class="img-responsive img-centered" alt="">
                             
-                            <p>Selected for hackinout hackathon which was held in NIT Surat .Sponsored by Google , Exotel ,Salesfoece ,GDG NIT Surat.<a href="https://hackinout.co/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p>Selected for hackinout hackathon which was held in NIT Surat .Sponsored by Google , Exotel ,Salesfoece ,GDG NIT Surat.<a href="https://hackinout.co/"></p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -576,8 +597,6 @@
                             <img src="img/portfolio/angelhack_pebble.jpg" class="img-responsive img-centered" alt="">
                             
                             <p>Selected for AngelHack hackathon which was held at Bombay Stock Exchange , Mumbai. Sponsored by HPE HAven OnDemand , Pebble ,Wacom , Amazon AWS Services. <a href="http://angelhack.com/">Flat Icons</a>. Winner of HPE HAven OnDEmand Challenge held at Anhelhack Mumbai.</p>
-
-
                                 <ul class="list-inline item-details">
                                     <li>Client:
                                         <strong><a href="http://angelhack.com/">AngelHacK_Mumbai</a>
@@ -591,11 +610,37 @@
                 </div>
             </div>
         </div>
-
+    
+    <!-- heatmap section -->
+    <div id="heatmapArea" style="height:700px;"></div>
+    <script src="js/heatmap.js"></script>
+    <script type="text/javascript">
+    window.onload = function(){
+ 
+    // heatmap configuration
+    var config = {
+        element: document.getElementById("heatmapArea"),
+        radius: 30,
+        opacity: 40
+    };
+    //creates and initializes the heatmap
+    var heatmap = h337.create(config);
+    var data = {
+        max: 50,
+        data: [
+            { x: 110, y: 20, count: 28 },
+            { x: 125, y: 125, count: 74 },
+            { x: 250, y: 230, count: 60 },
+            { x: 370, y: 250, count: 50 },
+            { x: 490, y: 270, count: 60 },
+            { x: 500, y: 330, count: 90 }
+        ]};
+     heatmap.store.setDataSet(data);
+     }
+     </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 

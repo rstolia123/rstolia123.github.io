@@ -248,6 +248,7 @@
                 <p>Senior undergraduate student in Electronics and Communication Engineering in <a href="http://www.iiita.ac.in">Indian Institute of Information Technology , Allahabad </a>. <br> I am interested in <b> Wireless Domain , Development Expereience ( Android & Web Based )  , IOT arena , Hacking , Computer Vision (VR or AR based concepts ) ,Game Development.</b>.</p>
                 <p> <br><br> </p>
                 <p align="left"> <b>Updates !!</b> 
+                <br> <font color="blue">July 2016 :</font> Internship offer from <a href="http://lvpmitra.com/#home">LVP Mitra- MIT Media Lab</a> at  Center for Innovation for ENgineering the Eye 2016.
                 <br> <font color="blue">June 2016 :</font> Shortlisted for <a href="https://www.hackerearth.com/sprints/techngage-pune/">Techngage_Pune </a> hackathon organized by NASSCOM at Persistent Systems ,Pune.
                 <br> <font color="blue">June 2016 :</font> Selected for <a href="https://www.makeschool.com/summer-academy/singapore">Summer Academy, Make School (Singapore)</a> Enrolled in ios development (Swift) Summer Academy, Singapore Apps Track. 
                 <br> <font color="blue">May 2016 :</font> Shortlisted for <a href="http://www.risehackathon.com/">Rise_Hackathon</a> for Stage II. Build & ( Deploy or Die ). 
@@ -612,7 +613,14 @@
         </div>
     
     <!-- heatmap section -->
-    <div id="heatmapArea" style="height:700px;"></div>
+
+    <div id="heatmapArea" class="well" 
+          style="width:610px;
+          padding:0;
+          height:700px;
+          cursor:pointer;
+          position:relative;">
+    </div>
     <script src="js/heatmap.js"></script>
     <script type="text/javascript">
     window.onload = function(){
@@ -625,19 +633,13 @@
     };
     //creates and initializes the heatmap
     var heatmap = h337.create(config);
-    var data = {
-        max: 50,
-        data: [
-            { x: 110, y: 20, count: 28 },
-            { x: 125, y: 125, count: 74 },
-            { x: 250, y: 230, count: 60 },
-            { x: 370, y: 250, count: 50 },
-            { x: 490, y: 270, count: 60 },
-            { x: 500, y: 330, count: 90 }
-        ]};
-     heatmap.store.setDataSet(data);
-     }
-     </script>
+  
+   document.getElementById("heatmapArea").onclick = function(e){
+       heatmap.store.addDataPoint(e.layerX, e.layerY, 1);
+        
+        };
+    };
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

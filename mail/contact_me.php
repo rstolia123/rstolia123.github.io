@@ -1,8 +1,8 @@
 <?php
 // Check for empty fields
-require 'PHPMailer-master/PHPMailerAutoload.php';
+require 'PHPMailer-master/class.phpmailer.php';
 
-$mail = new PHPMailerAutoload;
+$mail = new PHPMailer();
 
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -14,10 +14,10 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 
-$mail->name = $_POST['name']; 
-$mail->email_address = $_POST['email'];
-$mail->phone = $_POST['phone'];
-$mail->message = $_POST['message'];
+$name = $_POST['name']; 
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
 
 
 /*$name = $_POST['name'];
@@ -33,13 +33,7 @@ $mail->headers = "From: noreply@yourdomain.com\n"; // This is the email address 
 $mail->headers .= "Reply-To: $email_address";   
 
 
-if(!mail->send()){
-   echo 'Message could not be sent.';
-   echo 'Mailed Error:' .$mail->ErrorInfo;
-}
-else{
-   echo 'Message has been sent'
-}
+return $mail->Send();
 
 /*// Create the email and send the message
 $to = 'raghvendratolia@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.

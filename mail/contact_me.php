@@ -1,6 +1,6 @@
 <?php
 // Check for empty fields
-require 'PHPMailer-master/class.phpmailer.php';
+require 'class.phpmailer.php';
 
 $mail = new PHPMailer();
 

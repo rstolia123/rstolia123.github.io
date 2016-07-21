@@ -1,8 +1,8 @@
 <?php
 // Check for empty fields
-require 'class.phpmailer.php';
+require_once ('mail/class.phpmailer.php');
 
-$mail = new PHPMailer();
+$mail = new PHPMailer;
 
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
@@ -32,7 +32,6 @@ $mail->email_body = "You have received a new message from your website contact f
 $mail->headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $mail->headers .= "Reply-To: $email_address";   
 
-
 return $mail->Send();
 
 /*// Create the email and send the message
@@ -43,4 +42,5 @@ $headers = "From: noreply@yourdomain.com\n"; // This is the email address the ge
 $headers .= "Reply-To: $email_address";	
 mail($to , $email_subject, $email_body, $headers);
 return true;*/			
+
 ?>
